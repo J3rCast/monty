@@ -52,6 +52,11 @@ void pall(stack_t **top, __attribute__((unused))unsigned int n)
 		temp = temp->next;
 	}
 }
+/**
+ * pint - print the top of the stack
+ * @top: top of the stack
+ * @n: the value on the top
+ */
 void pint(stack_t **top, __attribute__((unused))unsigned int n)
 {
 	if (*top == NULL)
@@ -61,4 +66,24 @@ void pint(stack_t **top, __attribute__((unused))unsigned int n)
 	}
 
 	printf("%d\n", (*top)->n);
+}
+/**
+ * pint - print the top of the stack
+ * @top: top of the stack
+ * @n: the value on the top
+ */
+void pop(stack_t **top, __attribute__((unused))unsigned int n)
+{
+	stack_t *temp = NULL;
+
+	if (*top == NULL)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", lineNum);
+		exit(EXIT_FAILURE);
+	}
+	temp = (*top);
+
+	*top = (*top)->next;
+
+	free(temp);
 }
