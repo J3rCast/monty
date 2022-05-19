@@ -21,6 +21,7 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 		{"div", _div},
 		{"mul", _mul},
 		{"mod", _mod},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 

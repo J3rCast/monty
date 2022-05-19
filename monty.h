@@ -51,6 +51,7 @@ void _mul(stack_t **top, __attribute__((unused))unsigned int n);
 void _mod(stack_t **top, __attribute__((unused))unsigned int n);
 void pop(stack_t **top, __attribute__((unused))unsigned int n);
 void add(stack_t **top, __attribute__((unused))unsigned int n);
+void pchar(stack_t **top, __attribute__((unused))unsigned int n);
 void sub(stack_t **top, __attribute__((unused))unsigned int n);
 void free_dlistint(stack_t *head);
 stack_t *getNewNode(int n);
