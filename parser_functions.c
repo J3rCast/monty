@@ -1,0 +1,52 @@
+#include "monty.h"
+int lineNum = 0;
+/**
+ * parseLine - parse a sinlge line from a file
+ * @buffer: line of the file
+ *
+ * Return: token
+ */
+char *parseLine(char *buffer)
+{
+	char *script = NULL;
+
+	script = strtok(buffer, " \n\t");
+	if (script == NULL)
+		return (NULL);
+
+	return (script);
+}
+/**
+ * parser - parse a buffer
+ * @fileName: nome of the file to open
+ * @top: top of the stack
+ */
+void parser(char *fileName, stack_t **top)
+{
+	size_t bufSize = 0;
+	char *script = NULL;
+	char *buffer = NULL;
+	void (*get)(stack_t **, unsigned int);
+	FILE *file = fopen(fileName, "r");
+
+	if (file == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", fileName);
+		exit(EXIT_FAILURE);
+	}
+	while (getline(&buffer, &bufSize, file) != -1)
+	{
+		script = parseLine(buffer);
+		if (script == NULL)
+		{
+			lineNum++;
+			continue;
+		}
+		lineNum++;
+		get = get_function(script);
+		get(top, lineNum);
+	}
+	free(buffer);
+	if (fclose(file) == -1)
+		exit(-1);
+}
