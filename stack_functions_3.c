@@ -22,3 +22,26 @@ void pchar(stack_t **top, __attribute__((unused))unsigned int n)
 
 	printf("%c\n", character);
 }
+/**
+ * pstr - prints the ascii value of the entire stack
+ * @top: top of the stack
+ * @n: the value on the top
+ */
+void pstr(stack_t **top, __attribute__((unused))unsigned int n)
+{
+	stack_t *temp = NULL;
+
+	temp = (*top);
+
+	if (!*top)
+	{
+		putchar('\n');
+		return;
+	}
+	while (temp && temp->n != 0 && isprint(temp->n) != 0)
+	{
+		putchar(temp->n);
+		temp = temp->next;
+	}
+	putchar('\n');
+}
