@@ -47,6 +47,7 @@ void parser(char *fileName, stack_t **top)
 		get(top, lineNum);
 	}
 	free(buffer);
+	free_dlistint(*top);
 	if (fclose(file) == -1)
 		exit(-1);
 }
