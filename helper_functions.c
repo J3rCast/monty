@@ -31,6 +31,8 @@ int isInteger(char *string)
 
 	while (string[i] != '\0')
 	{
+		if (string[i] == '-' && i == 0)
+			i++;
 		if (string[i] > '9' || string[i] < '0')
 			return (1);
 		i++;
