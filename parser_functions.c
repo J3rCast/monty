@@ -44,6 +44,12 @@ void parser(char *fileName, stack_t **top)
 		}
 		lineNum++;
 		get = get_function(script);
+		if (get == NULL)
+		{
+			free_dlistint(*top);
+			fprintf(stderr, "L%d: unknown instruction %s\n", lineNum, script);
+			exit(EXIT_FAILURE);
+		}
 		get(top, lineNum);
 	}
 	free(buffer);
