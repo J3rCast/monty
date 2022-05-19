@@ -19,7 +19,6 @@ void push(stack_t **top, unsigned int n)
 	}
 	else
 		argNum = _atoi(arg);
-	
 
 	newNode = getNewNode(argNum);
 
