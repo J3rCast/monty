@@ -24,7 +24,6 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 	}
 	if (obtain[i].opcode == NULL)
 	{
-		free_dlistint(*top);
 		fprintf(stderr, "L%d: unknown instruction %s\n", lineNum, script);
 		exit(EXIT_FAILURE);
 	}
