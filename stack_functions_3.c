@@ -44,3 +44,29 @@ void pstr(stack_t **top, __attribute__((unused))unsigned int n)
 	}
 	putchar('\n');
 }
+/**
+ * rolt - The top element of the stack becomes the last one,
+ * and the second top element of the stack becomes the first one
+ * @top: top of the stack
+ * @n: the value on the top
+ */
+void rotl(stack_t **top, __attribute__((unused))unsigned int n)
+{
+	stack_t *temp = NULL;
+	stack_t *firstTemp = NULL;
+
+	if (!*top || !(*top)->next)
+		return;
+
+	temp = (*top);
+	firstTemp = (*top);
+
+	while (temp->next)
+		temp = temp->next;
+
+	*top = firstTemp->next;
+	firstTemp->next->prev = NULL;
+
+	temp->next = firstTemp;
+	firstTemp->next = NULL;
+}
