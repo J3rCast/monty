@@ -15,6 +15,7 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 		{"pint", pint},
 		{"pall", pall},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
