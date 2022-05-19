@@ -52,3 +52,13 @@ void pall(stack_t **top, __attribute__((unused))unsigned int n)
 		temp = temp->next;
 	}
 }
+void pint(stack_t **top, __attribute__((unused))unsigned int n)
+{
+	if (*top == NULL)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", lineNum);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", (*top)->n);
+}
