@@ -1,5 +1,25 @@
 #include "monty.h"
 /**
+ * free_dlistint - frees a list
+ * @head: head of the list
+ */
+void free_dlistint(stack_t *head)
+{
+	stack_t *temp = NULL;
+
+	temp = head;
+
+	if (head == NULL)
+		return;
+
+	while (temp->next)
+	{
+		temp = temp->next;
+		free(temp->prev);
+	}
+	free(temp);
+}
+/**
  * isInteger - verify if a string is integer
  * @string: string to verify
  *
