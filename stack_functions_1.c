@@ -96,7 +96,7 @@ void swap(stack_t **top, __attribute__((unused))unsigned int n)
 {
 	int temp = 0;
 
-	if (!(*top) && !(*top)->next)
+	if (!(*top) || !(*top)->next)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", lineNum);
 		exit(EXIT_FAILURE);
