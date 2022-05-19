@@ -12,8 +12,8 @@ stack_t *getNewNode(int n)
 	newNode = (stack_t *)malloc(sizeof(stack_t));
 	if (newNode == NULL)
 	{
-	perror("Error: malloc failed\n");
-	exit(EXIT_FAILURE);
+		perror("Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
 	newNode->n = n;
