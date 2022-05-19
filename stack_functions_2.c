@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * swap - swap bewtween top
+ * add - add bewtween top
  * @top: top of the stack
  * @n: the value on the top
  */

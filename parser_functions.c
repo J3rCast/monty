@@ -37,7 +37,7 @@ void parser(char *fileName, stack_t **top)
 	while (getline(&buffer, &bufSize, file) != -1)
 	{
 		script = parseLine(buffer);
-		if (script == NULL)
+		if (script == NULL || strcmp(script, "nop") == 0)
 		{
 			lineNum++;
 			continue;
