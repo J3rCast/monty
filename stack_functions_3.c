@@ -33,13 +33,12 @@ void pstr(stack_t **top, __attribute__((unused))unsigned int n)
 
 	temp = (*top);
 
-	if (!*top)
+	while (temp)
 	{
-		putchar('\n');
-		return;
-	}
-	while (temp && temp->n != 0 && isprint(temp->n) != 0)
-	{
+		if (temp->n == 0)
+			break;
+		if (isprint(temp->n) == 0)
+			break;
 		putchar(temp->n);
 		temp = temp->next;
 	}
