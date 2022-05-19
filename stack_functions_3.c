@@ -55,7 +55,7 @@ void rotl(stack_t **top, __attribute__((unused))unsigned int n)
 	stack_t *temp = NULL;
 	stack_t *firstTemp = NULL;
 
-	if (!*top || !(*top)->next)
+	if (!*top)
 		return;
 
 	temp = (*top);
