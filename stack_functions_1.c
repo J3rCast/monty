@@ -88,7 +88,7 @@ void pop(stack_t **top, __attribute__((unused))unsigned int n)
 	free(temp);
 }
 /**
- * swapt - swap bewtween top
+ * swap - swap bewtween top
  * @top: top of the stack
  * @n: the value on the top
  */
