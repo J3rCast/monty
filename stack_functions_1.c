@@ -11,13 +11,14 @@ void push(stack_t **top, unsigned int n)
 	stack_t *newNode = NULL;
 
 	arg = strtok(NULL, " \n\t");
-	if (isInteger(arg) == 0 && arg != NULL)
-		argNum = _atoi(arg);
-	else
+	if (arg == NULL || isInteger(arg) == 1)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
 	}
+	else
+		argNum = _atoi(arg);
+	
 
 	newNode = getNewNode(argNum);
 
