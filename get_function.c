@@ -12,6 +12,7 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 
 	instruction_t obtain[] = {
 		{"push", push},
+		{"pint", pint},
 		{"pall", pall},
 		{NULL, NULL}
 	};
