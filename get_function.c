@@ -20,6 +20,7 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 		{"sub", sub},
 		{"div", _div},
 		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 

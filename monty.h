@@ -48,6 +48,7 @@ void pall(stack_t **top, unsigned int n);
 void swap(stack_t **top, __attribute__((unused))unsigned int n);
 void _div(stack_t **top, __attribute__((unused))unsigned int n);
 void _mul(stack_t **top, __attribute__((unused))unsigned int n);
+void _mod(stack_t **top, __attribute__((unused))unsigned int n);
 void pop(stack_t **top, __attribute__((unused))unsigned int n);
 void add(stack_t **top, __attribute__((unused))unsigned int n);
 void sub(stack_t **top, __attribute__((unused))unsigned int n);
