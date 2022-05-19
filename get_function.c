@@ -22,11 +22,6 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg)
 			break;
 		i++;
 	}
-	if (obtain[i].opcode == NULL)
-	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", lineNum, script);
-		exit(EXIT_FAILURE);
-	}
 
 	return (obtain[i].f);
 }
