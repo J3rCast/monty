@@ -43,6 +43,7 @@ void parser(char *buffer, stack_t **top);
 void (*get_function(char *script))(stack_t **top, unsigned int arg);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void push(stack_t **top, unsigned int n);
+void pint(stack_t **top, __attribute__((unused))unsigned int n);
 void pall(stack_t **top, unsigned int n);
 void free_dlistint(stack_t *head);
 stack_t *getNewNode(int n);
