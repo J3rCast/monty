@@ -44,6 +44,7 @@ void (*get_function(char *script))(stack_t **top, unsigned int arg);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void push(stack_t **top, unsigned int n);
 void pall(stack_t **top, unsigned int n);
+void free_dlistint(stack_t *head);
 stack_t *getNewNode(int n);
 char *parseLine(char *buffer);
 unsigned int _atoi(char *s);
