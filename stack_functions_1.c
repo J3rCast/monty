@@ -13,6 +13,7 @@ void push(stack_t **top, unsigned int n)
 	arg = strtok(NULL, " \n\t");
 	if (arg == NULL || isInteger(arg) == 1)
 	{
+		free_dlistint(*top);
 		fprintf(stderr, "L%d: usage: push integer\n", n);
 		exit(EXIT_FAILURE);
 	}
