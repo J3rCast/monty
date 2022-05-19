@@ -48,6 +48,7 @@ void pall(stack_t **top, unsigned int n);
 void swap(stack_t **top, __attribute__((unused))unsigned int n);
 void pop(stack_t **top, __attribute__((unused))unsigned int n);
 void add(stack_t **top, __attribute__((unused))unsigned int n);
+void sub(stack_t **top, __attribute__((unused))unsigned int n);
 void free_dlistint(stack_t *head);
 stack_t *getNewNode(int n);
 char *parseLine(char *buffer);
