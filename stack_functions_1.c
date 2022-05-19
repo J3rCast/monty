@@ -68,7 +68,7 @@ void pint(stack_t **top, __attribute__((unused))unsigned int n)
 	printf("%d\n", (*top)->n);
 }
 /**
- * pint - print the top of the stack
+ * pop - pop the top of the stack
  * @top: top of the stack
  * @n: the value on the top
  */
