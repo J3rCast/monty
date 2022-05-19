@@ -46,6 +46,7 @@ void parser(char *fileName, stack_t **top)
 		get = get_function(script);
 		if (get == NULL)
 		{
+			fclose(file);
 			free_dlistint(*top);
 			fprintf(stderr, "L%d: unknown instruction %s\n", lineNum, script);
 			exit(EXIT_FAILURE);
